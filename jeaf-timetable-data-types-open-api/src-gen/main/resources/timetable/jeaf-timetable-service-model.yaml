@@ -14,3 +14,16 @@ paths:
         '200':
           description: Nothing is the result of nop ;-)
 
+components:
+  schemas:
+      
+    # com.anaptecs.jeaf.timetable.datatypes.CarrierCode
+    CarrierCode:
+      type: string
+      nullable: false
+    # com.anaptecs.jeaf.timetable.datatypes.UICCode
+    UICCode:
+      type: integer
+      format: int32
+      nullable: false
+

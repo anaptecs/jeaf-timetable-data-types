@@ -20,7 +20,7 @@ public class CarrierCodeDeserializer extends ValueDeserializer<CarrierCode> {
   @Override
   public CarrierCode deserialize( JsonParser pParser, DeserializationContext pContext ) {
     // Parse JSON content.
-    JsonNode lNode = pParser.objectReadContext().readTree(pParser);
+    JsonNode lNode = pContext.readTree(pParser);
     if (lNode instanceof StringNode) {
       return CarrierCode.of(lNode.asString());
     }

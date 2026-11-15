@@ -20,7 +20,7 @@ public class UICCodeDeserializer extends ValueDeserializer<UICCode> {
   @Override
   public UICCode deserialize( JsonParser pParser, DeserializationContext pContext ) {
     // Parse JSON content.
-    JsonNode lNode = pParser.objectReadContext().readTree(pParser);
+    JsonNode lNode = pContext.readTree(pParser);
     if (lNode instanceof NumericNode) {
       NumericNode lNumericNode = (NumericNode) lNode;
       return UICCode.of(lNumericNode.intValue());
